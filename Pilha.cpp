@@ -60,7 +60,7 @@ int main(void){
         scanf("%d",&num);
         p.CriaPilha(&p.vetpilha[i],num);
         p.VerTopo();
-        // laço q p/ fazer a remoção se p.topo = 10 realiza a remoção
+        // laço q p/ fazer a remoção se p.topo == 10 realiza a remoção
          if(p.topo==MAX){
             j=p.topo;
             do{
