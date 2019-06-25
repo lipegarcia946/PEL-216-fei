@@ -5,17 +5,17 @@ int const MAX=10;
 class Pilha{
 
 public:
-//declaraÁ„o do vetor p/ pilha com tamanho MAX
-//e um contador pro topo comeÁando em -1
+//declara√ß√£o do vetor p/ pilha com tamanho MAX
+//e um contador pro topo come√ßando em -1
 int vetpilha[MAX];
 int topo=-1;
-/*funÁıes que s„o para genrenciamento da pilha*/
+/*fun√ß√µes que s√£o para genrenciamento da pilha*/
 void CriaPilha(int vetpilha[],int);
 void VerTopo();
 int RemoverDaPilha(int vetpilha[]);
 
 };
-/*funÁ„o que cria a pilha caso topo=MAX
+/*fun√ß√£o que cria a pilha caso topo=MAX
 exibe a msg pilha cheia*/
 
 void Pilha::CriaPilha(int vetpilha[], int num){
@@ -26,7 +26,7 @@ void Pilha::CriaPilha(int vetpilha[], int num){
         }
 }
 
-/*funÁ„o que mostra o topo da pilha enquanto topo!=MAX
+/*fun√ß√£o que mostra o topo da pilha enquanto topo!=MAX
 exibe a msg pilha cheia*/
 
 void Pilha::VerTopo(){
@@ -35,7 +35,7 @@ void Pilha::VerTopo(){
 
         }
 }
-/*funÁ„o que remove da pilha caso topo=MAX
+/*fun√ß√£o que remove da pilha caso topo=MAX
 aux= vetpilha[topo] */
 
 int Pilha:: RemoverDaPilha(int vetpilha[]){
@@ -53,13 +53,15 @@ int Pilha:: RemoverDaPilha(int vetpilha[]){
 int main(void){
      Pilha p;
     int num, r, j=0;
-    printf("digite 10 numeros: \n");
+    // la√ßo para inser√ß√£o visualiza√ß√£o do topo
+     printf("digite 10 numeros: \n");
     for(int i=0;i<MAX; i++){
         printf("[%do.] numero:", i+1);
         scanf("%d",&num);
         p.CriaPilha(&p.vetpilha[i],num);
         p.VerTopo();
-        if(p.topo==MAX){
+        // la√ßo q p/ fazer a remo√ß√£o se p.topo = 10 realiza a remo√ß√£o
+         if(p.topo==MAX){
             j=p.topo;
             do{
                 printf("o elemento removido foi: %d \n",r);
